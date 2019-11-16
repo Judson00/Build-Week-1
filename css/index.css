@@ -134,6 +134,7 @@ header div div {
   width: max-content;
   border-radius: 5px;
   color: #ff631b;
+  background-color: #fff;
   transition: 0.35s ease-in-out;
 }
 header div div:hover {
