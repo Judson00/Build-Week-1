@@ -1,6 +1,7 @@
-# Marketing-Banbanaste
+# Marketing-Mitchell
 
-### Marketing page for Roberto Banbanaste
+### Marketing page for Robert Mitchell
+
 
 ---
 
