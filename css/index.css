@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Bowlby One SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bowlby One SC Regular'), local('BowlbyOneSC-Regular'), url(https://fonts.gstatic.com/s/bowlbyonesc/v11/DtVlJxerQqQm37tzN3wMug9P_g_2pw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxIIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('truetype');
+}
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #2f2836;
+}
+h2,
+span {
+  font-family: "Bowlby One SC", sans-serif;
+  color: #f15b3c;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 50px;
+}
+/* nav section */
+.navbar {
+  height: 80px;
+}
+.navbar nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar nav div {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar nav div a {
+  text-decoration: none;
+  padding: 3px 15px;
+  border-radius: 3px;
+  color: #555555;
+  transition: 0.35s ease-in-out;
+}
+.navbar nav div a:nth-child(3) {
+  background-color: #ff631b;
+  color: #fff;
+}
+.navbar nav div a:hover {
+  color: #c2c2c2;
+  opacity: 0.459;
+}
+.navbar nav div a:nth-child(3):hover {
+  opacity: 1;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+/* header section cta */

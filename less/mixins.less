@@ -1,5 +1,9 @@
-.transition(@shadow: none, @opacity: 1, ) {
-  transition: 0.3s;
-  box-shadow: @shadow;
-  opacity: @opacity;
+.transition(@transition: 0.3s) {
+  transition: @transition;
+}
+
+.flex(@justify: space-between, @align: center) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
 }
