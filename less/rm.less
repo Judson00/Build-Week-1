@@ -13,7 +13,7 @@
   .founders{
     margin-bottom: 4rem;
 
-    h3{
+    h2{
       color: @orangeTextColor;
       font-size: 3.5rem;
       font-weight: bold;
@@ -49,10 +49,8 @@
       background-color: transparent;
       width: 16rem;
       height: 100%;
-      border: .2rem solid red;
       perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    
-    
+     
       /* This container is needed to position the front and back side */
       .flip-card-inner {
         position: relative;
@@ -74,40 +72,44 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
-      }
-    
-      /* Style the front side (fallback if image is missing) */
-        .flip-card-front {
-          background-color: #bbb;
-          color: black;
-          
-          img{
-            width: 100%;
-            height: 100%;
-          }
+        border-radius: 5px;
+        background-color: #bbb;
+        color: black;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),            0 15px 12px rgba(0, 0, 0, 0.22);
+        
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
         }
+      }
     
         /* Style the back side */
         .flip-card-back {
-          background-color: dodgerblue;
+          display: flex;
+          flex-wrap: wrap;
+          background-color: @orangeTextColor;
           color: white;
           transform: rotateY(180deg);
           position: absolute;
           width: 100%;
           height: 100%;
           backface-visibility: hidden;
+          border-radius: 5px;
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),            0 15px 12px rgba(0, 0, 0, 0.22);
+          padding: .2rem;
       
           h3{
+            text-align: center;
             font-size: 2rem;
             font-weight: bold;
           }
 
-          p{
-            display:flex;
-            align-items:center;
-            width: 100%;
+          .card-text{
+            text-align: center;
+            width: 95%;
             height:100%;
-            justify-content:center;
+            font-size: 1.2rem;
           }
         }//flip-card-back ends
       }//flip card inner ends

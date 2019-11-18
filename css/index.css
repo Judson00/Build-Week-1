@@ -333,7 +333,7 @@ header div div:hover {
 .aboutWrap .founders {
   margin-bottom: 4rem;
 }
-.aboutWrap .founders h3 {
+.aboutWrap .founders h2 {
   color: #f15b3c;
   font-size: 3.5rem;
   font-weight: bold;
@@ -362,12 +362,10 @@ header div div:hover {
   background-color: transparent;
   width: 16rem;
   height: 100%;
-  border: 0.2rem solid red;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
-  /* This container is needed to position the front and back side */
 }
-.cards .card-row .card .flip-card-inner {
+.cards .card-row .card  .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -376,43 +374,48 @@ header div div:hover {
   transform-style: preserve-3d;
   /* Do an horizontal flip when you move the mouse over the flip box container */
   /* Position the front and back side */
-  /* Style the front side (fallback if image is missing) */
   /* Style the back side */
 }
-.cards .card-row .card .flip-card-inner:hover {
+.cards .card-row .card  .flip-card-inner:hover {
   transform: rotateY(180deg);
 }
-.cards .card-row .card .flip-card-inner .flip-card-front {
+.cards .card-row .card  .flip-card-inner .flip-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-}
-.cards .card-row .card .flip-card-inner .flip-card-front {
+  border-radius: 5px;
   background-color: #bbb;
   color: black;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-.cards .card-row .card .flip-card-inner .flip-card-front img {
+.cards .card-row .card  .flip-card-inner .flip-card-front img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
-.cards .card-row .card .flip-card-inner .flip-card-back {
-  background-color: dodgerblue;
+.cards .card-row .card  .flip-card-inner .flip-card-back {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f15b3c;
   color: white;
   transform: rotateY(180deg);
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  padding: 0.2rem;
 }
-.cards .card-row .card .flip-card-inner .flip-card-back h3 {
+.cards .card-row .card  .flip-card-inner .flip-card-back h3 {
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
 }
-.cards .card-row .card .flip-card-inner .flip-card-back p {
-  display: flex;
-  align-items: center;
-  width: 100%;
+.cards .card-row .card  .flip-card-inner .flip-card-back .card-text {
+  text-align: center;
+  width: 95%;
   height: 100%;
-  justify-content: center;
+  font-size: 1.2rem;
 }
