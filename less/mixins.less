@@ -7,48 +7,54 @@
   justify-content: @justify;
   align-items: @align;
 }
-
-
 //card flip for founders page
-.flip(){
-  &:hover{
-    transform: rotateY(180deg);
-  }
+// .flip() {
+//   /* This container is needed to position the front and back side */
+//   .flip-card-inner {
+//     position: relative;
+//     width: 100%;
+//     height: 100px;
+//     text-align: center;
+//     transition: transform 0.8s;
+//     transform-style: preserve-3d;
 
-  .flip-card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
 
-    &:hover{
-      transform: rotateY(180deg);
-      box-shadow: 2rem 0.9rem .2rem gray;
-    }
-  }
+//   /* Do an horizontal flip when you move the mouse over the flip box container */
+//   &:hover{
+//     transform: rotateY(180deg);
+//   }
 
-  .flip-card-front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    img{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      border: 1px #66ec87;
-    }//img ends
-  }//flip-card-front ends
+//   /* Position the front and back side */
+//   .flip-card-front{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     backface-visibility: hidden;
+//   }
 
-  .flip-card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-  }
-}
+//   /* Style the front side (fallback if image is missing) */
+//     .flip-card-front {
+//       background-color: #bbb;
+//       color: black;
+//     }
+
+//     /* Style the back side */
+//     .flip-card-back {
+//       background-color: dodgerblue;
+//       color: white;
+//       transform: rotateY(180deg);
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       backface-visibility: hidden;
+  
+
+//       p{
+//         display:flex;
+//         align-items:center;
+//         height:100%;
+//         justify-content:center;
+//       }
+//     }//flip-card-back ends
+//   }//flip card inner ends
+// }//flip ends

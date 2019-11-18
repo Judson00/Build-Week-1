@@ -1,98 +1,120 @@
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 62.5%;
-  background: #ff631b;
-}//body ends
-
-
 .about-container{
   max-width: 1000px;
-  width: 98%;
+  margin: 0 auto;
+}
+
+.aboutWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff631b;
+  width: 100%;
 
   .founders{
-    width: 100%;
+    margin-bottom: 4rem;
+
+    h2{
+      color: @orangeTextColor;
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  //background: #ff631b;
+} //body ends
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center;  
+  width: 100%; //importante
+  //min-height: 500px;
+
+  .card-row:nth-child(1){
+    max-width: 70%;
+  }
+
+  .card-row{
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-      h3{
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #66ec87;
-        margin-top: 1rem;
-      }//h3 ends
-  }//founders ends
-
-  .cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 20rem;
     width: 100%;
-    
-    .top-cards{
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      width: 100%;
-      //background: #ff631b;
-      margin-bottom: 1.5rem;
+    margin-bottom: 10rem;
 
-      .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 18rem;
-        width: 14rem;
-        background: whitesmoke;
-        margin: 2rem;
-        border: 1px solid #66ec87;
-        //background:#ff631b;
-        //box-shadow: 2rem 0.9rem .2rem gray;
-
-        .flip();
-      }//card ends
-    }//top-cards ends
-
-    .bottom-cards{
+    .card {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 120%;
-      //background: #ff631b;
-      margin-top: 1.5rem;
+      background-color: transparent;
+      width: 16rem;
+      height: 100%;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+     
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    
+    
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      &:hover{
+        transform: rotateY(180deg);
+      }
+    
+      /* Position the front and back side */
+      .flip-card-front{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 5px;
+        background-color: #bbb;
+        color: black;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),            0 15px 12px rgba(0, 0, 0, 0.22);
+        
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+    
+        /* Style the back side */
+        .flip-card-back {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: @orangeTextColor;
+          color: white;
+          transform: rotateY(180deg);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 5px;
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),            0 15px 12px rgba(0, 0, 0, 0.22);
+          padding: .2rem;
+      
+          h3{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+          }
 
-      .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 18rem;
-        width: 14rem;
-        background: whitesmoke;
-        margin: 2rem;
-        border: 1px solid #66ec87;
-        //background:#ff631b;
-        //box-shadow: 2rem 0.9rem .2rem gray;
+          .card-text{
+            text-align: center;
+            width: 95%;
+            height:100%;
+            font-size: 1.2rem;
+          }
+        }//flip-card-back ends
+      }//flip card inner ends
+    }//flip-card ends    
+  }
 
-        .flip();
-
-        // img{
-        //   display: flex;
-        //   width: 10rem;
-        //   height: 10rem;
-        //   border: 1px solid #66ec87;
-        // }//img ends
-      }//card ends
-    }//bottom-cards ends
-  }//cards ends 
-
-}//about-container ends
-
-//cards have a width of 18 rem
+  
+}
