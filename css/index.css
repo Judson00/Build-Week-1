@@ -331,7 +331,7 @@ header div div:hover {
   width: 100%;
 }
 .aboutWrap .founders {
-  margin-bottom: 4rem;
+  margin: 2rem 0 5rem 0;
 }
 .aboutWrap .founders h2 {
   color: #f15b3c;
