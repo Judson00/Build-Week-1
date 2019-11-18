@@ -319,144 +319,100 @@ header div div:hover {
     height: 70px;
   }
 }
-.aboutWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 62.5%;
-  background: #ff631b;
-}
 .about-container {
   max-width: 1000px;
-  width: 98%;
+  margin: 0 auto;
+}
+.aboutWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff631b;
-}
-.about-container .founders {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.about-container .founders h3 {
-  font-size: 2.5rem;
+.aboutWrap .founders {
+  margin-bottom: 4rem;
+}
+.aboutWrap .founders h3 {
+  color: #f15b3c;
+  font-size: 3.5rem;
   font-weight: bold;
-  color: #66ec87;
-  margin-top: 1rem;
 }
-.about-container .cards {
+.cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center ;
   justify-content: center;
   width: 100%;
 }
-.about-container .cards .top-cards {
+.cards .card-row:nth-child(1) {
+  max-width: 70%;
+}
+.cards .card-row {
   display: flex;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 20rem;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10rem;
 }
-.about-container .cards .top-cards .card {
+.cards .card-row .card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  height: 18rem;
-  width: 14rem;
-  background: whitesmoke;
-  margin: 2rem;
-  border: 1px solid #66ec87;
+  justify-content: center;
+  background-color: transparent;
+  width: 16rem;
+  height: 100%;
+  border: 0.2rem solid red;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  /* This container is needed to position the front and back side */
 }
-.about-container .cards .top-cards .card:hover {
-  transform: rotateY(180deg);
-}
-.about-container .cards .top-cards .card .flip-card-inner {
+.cards .card-row .card .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
 }
-.about-container .cards .top-cards .card .flip-card-inner:hover {
+.cards .card-row .card .flip-card-inner:hover {
   transform: rotateY(180deg);
-  box-shadow: 2rem 0.9rem 0.2rem gray;
 }
-.about-container .cards .top-cards .card .flip-card-front {
+.cards .card-row .card .flip-card-inner .flip-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
-.about-container .cards .top-cards .card .flip-card-front img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border: 1px #66ec87;
+.cards .card-row .card .flip-card-inner .flip-card-front {
+  background-color: #bbb;
+  color: black;
 }
-.about-container .cards .top-cards .card .flip-card-back {
-  position: absolute;
+.cards .card-row .card .flip-card-inner .flip-card-front img {
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+}
+.cards .card-row .card .flip-card-inner .flip-card-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
-.about-container .cards .bottom-cards {
+.cards .card-row .card .flip-card-inner .flip-card-back h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.cards .card-row .card .flip-card-inner .flip-card-back p {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 100%;
   justify-content: center;
-  width: 120%;
-  margin-top: 1.5rem;
-}
-.about-container .cards .bottom-cards .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 18rem;
-  width: 14rem;
-  background: whitesmoke;
-  margin: 2rem;
-  border: 1px solid #66ec87;
-}
-.about-container .cards .bottom-cards .card:hover {
-  transform: rotateY(180deg);
-}
-.about-container .cards .bottom-cards .card .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.about-container .cards .bottom-cards .card .flip-card-inner:hover {
-  transform: rotateY(180deg);
-  box-shadow: 2rem 0.9rem 0.2rem gray;
-}
-.about-container .cards .bottom-cards .card .flip-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.about-container .cards .bottom-cards .card .flip-card-front img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border: 1px #66ec87;
-}
-.about-container .cards .bottom-cards .card .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
 }

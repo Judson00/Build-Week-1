@@ -1,96 +1,118 @@
-.aboutWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 62.5%;
-  background: #ff631b;
-} //body ends
-
-.about-container {
+.about-container{
   max-width: 1000px;
-  width: 98%;
+  margin: 0 auto;
+}
+
+.aboutWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #ff631b;
+  width: 100%;
 
-  .founders {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .founders{
+    margin-bottom: 4rem;
 
-    h3 {
-      font-size: 2.5rem;
+    h3{
+      color: @orangeTextColor;
+      font-size: 3.5rem;
       font-weight: bold;
-      color: #66ec87;
-      margin-top: 1rem;
-    } //h3 ends
-  } //founders ends
+    }
+  }
+  
+  //background: #ff631b;
+} //body ends
 
-  .cards {
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center;  
+  width: 100%; //importante
+  //min-height: 500px;
+
+  .card-row:nth-child(1){
+    max-width: 70%;
+  }
+
+  .card-row{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 20rem;
     width: 100%;
+    margin-bottom: 10rem;
 
-    .top-cards {
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      width: 100%;
-      //background: #ff631b;
-      margin-bottom: 1.5rem;
-
-      .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 18rem;
-        width: 14rem;
-        background: whitesmoke;
-        margin: 2rem;
-        border: 1px solid #66ec87;
-        //background:#ff631b;
-        //box-shadow: 2rem 0.9rem .2rem gray;
-
-        .flip();
-      } //card ends
-    } //top-cards ends
-
-    .bottom-cards {
+    .card {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 120%;
-      //background: #ff631b;
-      margin-top: 1.5rem;
+      background-color: transparent;
+      width: 16rem;
+      height: 100%;
+      border: .2rem solid red;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    
+    
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    
+    
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      &:hover{
+        transform: rotateY(180deg);
+      }
+    
+      /* Position the front and back side */
+      .flip-card-front{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+    
+      /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+          
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+    
+        /* Style the back side */
+        .flip-card-back {
+          background-color: dodgerblue;
+          color: white;
+          transform: rotateY(180deg);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+      
+          h3{
+            font-size: 2rem;
+            font-weight: bold;
+          }
 
-      .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 18rem;
-        width: 14rem;
-        background: whitesmoke;
-        margin: 2rem;
-        border: 1px solid #66ec87;
-        //background:#ff631b;
-        //box-shadow: 2rem 0.9rem .2rem gray;
+          p{
+            display:flex;
+            align-items:center;
+            width: 100%;
+            height:100%;
+            justify-content:center;
+          }
+        }//flip-card-back ends
+      }//flip card inner ends
+    }//flip-card ends    
+  }
 
-        .flip();
-
-        // img{
-        //   display: flex;
-        //   width: 10rem;
-        //   height: 10rem;
-        //   border: 1px solid #66ec87;
-        // }//img ends
-      } //card ends
-    } //bottom-cards ends
-  } //cards ends
-} //about-container ends
-
-//cards have a width of 18 rem
+  
+}
