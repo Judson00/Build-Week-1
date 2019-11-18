@@ -72,7 +72,7 @@ span {
   font-size: 2.4rem;
 }
 .navbar nav div {
-  width: 300px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,19 +86,38 @@ span {
   transition: 0.35s ease-in-out;
 }
 .navbar nav div a:hover {
+  cursor: pointer;
   color: #c2c2c2;
   opacity: 0.459;
 }
 .navbar nav div a:nth-child(3) {
   background-color: #ff631b;
   color: #fff;
+  border-radius: 50px;
 }
-.navbar nav div a:nth-child(3):nth-child(3):hover {
+.navbar nav div a:nth-child(3):hover {
   opacity: 1;
   color: #fff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-@media (max-width: 860px) {
+.navbar nav div span {
+  font-size: 2rem;
+  transition: 0.35s ease-in-out;
+}
+.navbar nav div span:hover {
+  cursor: pointer;
+  opacity: 0.459;
+}
+.navbar nav div span.off {
+  font-size: 2rem;
+  opacity: 0.7;
+  transition: 0.35s ease-in-out;
+}
+.navbar nav div span.off:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+@media (max-width: 700px) {
   .navbar nav {
     flex-direction: column;
   }
@@ -132,7 +151,7 @@ header div div {
   font-size: 1.8rem;
   padding: 5px 40px;
   width: max-content;
-  border-radius: 5px;
+  border-radius: 50px;
   color: #ff631b;
   background-color: #fff;
   transition: 0.35s ease-in-out;
@@ -165,6 +184,7 @@ header div div:hover {
 /* info section w/ cards */
 .bkDark {
   background-color: #66ec87;
+  background: linear-gradient(-40deg, #00a650c7 0%, #66ec87 63%, #66ec87 100%);
   padding: 100px 0 150px;
   z-index: -100;
 }
@@ -298,185 +318,4 @@ header div div:hover {
   #brands div .med {
     height: 70px;
   }
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 62.5%;
-  background: #ff631b;
-}
-.about-container {
-  max-width: 1000px;
-  width: 98%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #ff631b;
-}
-.about-container .founders {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-container .founders h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #66ec87;
-  margin-top: 1rem;
-}
-.about-container .cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.about-container .cards .top-cards {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
-.about-container .cards .top-cards .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 18rem;
-  width: 14rem;
-  background: whitesmoke;
-  margin: 2rem;
-  border: 1px solid #66ec87;
-}
-.about-container .cards .top-cards .card:hover {
-  transform: rotateY(180deg);
-}
-.about-container .cards .top-cards .card .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.about-container .cards .top-cards .card .flip-card-inner:hover {
-  transform: rotateY(180deg);
-  box-shadow: 2rem 0.9rem 0.2rem gray;
-}
-.about-container .cards .top-cards .card .flip-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.about-container .cards .top-cards .card .flip-card-front img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border: 1px #66ec87;
-}
-.about-container .cards .top-cards .card .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-.about-container .cards .bottom-cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120%;
-  margin-top: 1.5rem;
-}
-.about-container .cards .bottom-cards .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 18rem;
-  width: 14rem;
-  background: whitesmoke;
-  margin: 2rem;
-  border: 1px solid #66ec87;
-}
-.about-container .cards .bottom-cards .card:hover {
-  transform: rotateY(180deg);
-}
-.about-container .cards .bottom-cards .card .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.about-container .cards .bottom-cards .card .flip-card-inner:hover {
-  transform: rotateY(180deg);
-  box-shadow: 2rem 0.9rem 0.2rem gray;
-}
-.about-container .cards .bottom-cards .card .flip-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.about-container .cards .bottom-cards .card .flip-card-front img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border: 1px #66ec87;
-}
-.about-container .cards .bottom-cards .card .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  background: #66ec87;
-  margin: 10rem 0 1rem 0;
-}
-footer .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: white-smoke;
-  margin: 0.5rem;
-  color: #d25116;
-}
-footer .contact h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-footer .contact .address {
-  display: flex;
-  flex-direction: column;
-  margin: 5% 0 5% 0;
-  font-size: 1.3rem;
-}
-footer .contact .address .mailing {
-  text-align: center;
-}
-footer .contact .phone {
-  text-align: center;
-}
-footer .contact .email {
-  text-align: center;
-}
-.copyright {
-  font-size: 1rem;
-  color: #66ec87;
 }
