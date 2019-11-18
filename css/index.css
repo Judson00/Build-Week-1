@@ -319,3 +319,144 @@ header div div:hover {
     height: 70px;
   }
 }
+.aboutWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 62.5%;
+  background: #ff631b;
+}
+.about-container {
+  max-width: 1000px;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ff631b;
+}
+.about-container .founders {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-container .founders h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #66ec87;
+  margin-top: 1rem;
+}
+.about-container .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.about-container .cards .top-cards {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.about-container .cards .top-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 18rem;
+  width: 14rem;
+  background: whitesmoke;
+  margin: 2rem;
+  border: 1px solid #66ec87;
+}
+.about-container .cards .top-cards .card:hover {
+  transform: rotateY(180deg);
+}
+.about-container .cards .top-cards .card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.about-container .cards .top-cards .card .flip-card-inner:hover {
+  transform: rotateY(180deg);
+  box-shadow: 2rem 0.9rem 0.2rem gray;
+}
+.about-container .cards .top-cards .card .flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.about-container .cards .top-cards .card .flip-card-front img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px #66ec87;
+}
+.about-container .cards .top-cards .card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.about-container .cards .bottom-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+  margin-top: 1.5rem;
+}
+.about-container .cards .bottom-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 18rem;
+  width: 14rem;
+  background: whitesmoke;
+  margin: 2rem;
+  border: 1px solid #66ec87;
+}
+.about-container .cards .bottom-cards .card:hover {
+  transform: rotateY(180deg);
+}
+.about-container .cards .bottom-cards .card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.about-container .cards .bottom-cards .card .flip-card-inner:hover {
+  transform: rotateY(180deg);
+  box-shadow: 2rem 0.9rem 0.2rem gray;
+}
+.about-container .cards .bottom-cards .card .flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.about-container .cards .bottom-cards .card .flip-card-front img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px #66ec87;
+}
+.about-container .cards .bottom-cards .card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
